@@ -48,7 +48,10 @@ if __name__ == "__main__":
     inputfile = args.input
     outputfile = args.output
 
+    print("removing img...")
     remove_img(inputfile)
+    print("removed!\nmerging pdf...")
     Overlay(inputfile, outputfile)
+    print("merged!")
 
     remove(str(inputfile) + "-textonly.pdf")
